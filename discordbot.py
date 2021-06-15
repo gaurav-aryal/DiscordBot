@@ -1,7 +1,7 @@
-
 import discord
 import undetected_chromedriver.v2 as uc
 from selenium.webdriver.common.keys import Keys
+import config
 
 driver = uc.Chrome()
 driver.get('https://www.cleverbot.com')
@@ -28,4 +28,4 @@ class MyClient(discord.Client):
             await message.channel.send(f"{message.author.mention} {reponse}")
 
 client = MyClient()
-client.run('ODU0MzQ5ODA3NTc3NTk1OTE0.YMipQw.O34yTqtEtlehQ7eJVD4om19BhQM')
+client.run(config.BOTTOKEN)
